@@ -115,6 +115,11 @@ img{
     justify-content: center;
     padding: 5px ;
     margin: 40px; 
+    transition: all 2s;
+}
+
+.imagesInicio:hover{
+    transform: scale(1.2);
 }
 
 .parks{
