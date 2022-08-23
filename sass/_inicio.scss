@@ -1,3 +1,10 @@
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 .introduction{
     display: grid;
     grid-template-columns: 600px 500px;
@@ -6,8 +13,7 @@
     margin: 20px 5px 40px 5px;
 
     p{
-        display: flex;
-        flex-direction: column;
+        @include flex-column-center;
         align-items: center;
         padding: 50px;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,9 +50,7 @@
     padding: 40px;
 
     .imagesInicio{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-column-center;
         padding: 5px ;
         margin: 40px; 
         transition: all 2s;
