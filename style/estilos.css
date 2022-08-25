@@ -39,6 +39,7 @@ body {
 .introduction p {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 50px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -110,8 +111,43 @@ footer ul li {
 footer ul li a {
   font-family: "Bebas Neue", cursive;
   font-size: 16px;
-  color: #6e6288;
+  color: #6A67CE;
   text-decoration: none;
+}
+
+.Noticias {
+  display: grid;
+  grid-template-columns: 430px 430px 430px;
+  grid-template-rows: 300px 300px 300px;
+  padding: 40px;
+}
+.Noticias .imagesNoticias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  margin: 40px;
+  transition: all 2s;
+}
+.Noticias .imagesNoticias:hover {
+  transform: scale(1.2);
+}
+.Noticias .imagesNoticias img {
+  width: 350px;
+  height: 200px;
+  border-radius: 20px;
+}
+.Noticias .imagesNoticias ul li {
+  list-style-type: none;
+  align-items: center;
+  text-align: center;
+}
+.Noticias .imagesNoticias ul li a {
+  padding: 5px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  color: blueviolet;
+  text-decoration: underline;
 }
 
 .imagesParks {

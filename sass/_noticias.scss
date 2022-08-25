@@ -1,0 +1,40 @@
+.Noticias{
+    display: grid;
+    grid-template-columns: 430px 430px 430px;
+    grid-template-rows: 300px 300px 300px;
+    padding: 40px;
+
+    .imagesNoticias{
+        @include flex-column-center;
+        padding: 5px ;
+        margin: 40px; 
+        transition: all 2s;
+
+        &:hover{
+            transform: scale(1.2);
+        }
+
+        img{
+            width: 350px;
+            height: 200px;
+            border-radius: 20px
+        }
+        ul li{
+            list-style-type: none;
+            align-items: center;
+            text-align: center;
+
+            a{
+                padding: 5px;
+                font-family: 'Bebas Neue', cursive;;
+                font-size: 20px;
+                color: blueviolet;
+                text-decoration:underline;
+                
+            }
+    
+    
+        }
+    }
+
+}
