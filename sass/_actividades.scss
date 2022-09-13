@@ -1,38 +1,29 @@
 h1{
-    padding: 30px;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 40px;
+    padding: 20px 10px 20px 10px;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: $color-celeste;
     text-align: center;
-    color: $color-azul;
-
-}
-
-.carousel-item{
-    padding: 50px;
-    margin: 0px 10px 100px 10px;
-
-    img{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 600px;
-        height: 500px
-    }
-
-    h5{
-        font-family: 'Bebas Neue', cursive;
-        font-size: 20px;
-        font-weight: 200;
-        text-align: center;
-        color: #F1F0C0;
     
+}
+
+@media (max-width:576px) {
+    h1{
+        font-size: 15px;
     }
 }
 
-.activities{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 20px;
-    text-align: center;
-    color:#c0c5f1;
-
+.carousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 50px 50px 50px;
+    margin: 30px;
+    
+    img{
+        border: solid 20px #EEF1FF;
+        background-color: #EEF1FF;
+    }
 }

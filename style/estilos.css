@@ -5,28 +5,38 @@
 }
 
 body {
-  background-color: #F1F0C0;
+  background-color: #F9F9F9;
 }
 
 .container-fluid {
   padding: 10px;
   border: 10px;
+  overflow: hidden;
   text-align: right;
-  background-color: #947EC3;
+  background-color: #F9F9F9;
+  box-shadow: 0px 0px 30px 0px rgba(127, 137, 161, 0.3);
 }
 .container-fluid .navbar-brand {
   font-size: 30px;
   font-weight: 300;
   font-family: "Bebas Neue", cursive;
+  color: #0096FF;
 }
 .container-fluid ul li {
   list-style-type: none;
   display: inline-block;
+  color: #0096FF;
 }
 .container-fluid ul li a {
   font-family: "Bebas Neue", cursive;
-  color: #F1F0C0;
+  color: #0096FF;
   text-decoration: none;
+}
+@media (max-width: 600px) {
+  .container-fluid .navbar-brand a {
+    float: none;
+    width: 100%;
+  }
 }
 
 .introduction {
@@ -42,24 +52,49 @@ body {
   justify-content: center;
   align-items: center;
   padding: 50px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 45px;
   text-align: left;
-  color: #6e6288;
+  color: black;
 }
 .introduction p span {
-  font-style: italic;
-  color: #6A67CE;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0096FF;
 }
 .introduction iframe {
   display: flex;
   justify-content: center;
   padding: 30px;
-  border: 3px solid #947EC3;
+  border: 5px solid #0096FF;
   margin: 180px 20px 20px 50px;
-  background-color: #B689C0;
+  background-color: #F9F9F9;
+}
+@media (max-width: 900px) {
+  .introduction {
+    display: grid;
+    grid-template-columns: -webkit-min-content;
+    grid-template-columns: min-content;
+  }
+}
+@media (max-width: 576px) {
+  .introduction {
+    display: grid;
+    grid-template-columns: -webkit-min-content;
+    grid-template-columns: min-content;
+  }
+  .introduction iframe {
+    display: none !important;
+  }
+  .introduction p {
+    display: inline;
+    font-size: 14px;
+  }
+  .introduction p span {
+    font-size: 20px;
+  }
 }
 
 .parks {
@@ -85,18 +120,30 @@ body {
   border-radius: 20px;
 }
 .parks .imagesInicio h2 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #6A67CE;
+  font-family: "Montserrat", sans-serif;
+  color: #0096FF;
   font-weight: 600;
   text-align: center;
   font-size: 16px;
 }
 .parks .imagesInicio h3 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #6A67CE;
+  font-family: "Montserrat", sans-serif;
+  color: black;
   font-weight: 600;
   text-align: center;
   font-size: 13px;
+}
+@media (max-width: 900px) {
+  .parks {
+    display: grid;
+    grid-template-columns: -webkit-min-content;
+    grid-template-columns: min-content;
+  }
+}
+@media (max-width: 576px) {
+  .parks {
+    display: none !important;
+  }
 }
 
 footer {
@@ -104,14 +151,22 @@ footer {
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
+  background-color: #0096FF;
+  text-align: right;
+  line-height: normal;
+}
+footer h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  color: #F9F9F9;
 }
 footer ul li {
   list-style-type: none;
 }
 footer ul li a {
-  font-family: "Bebas Neue", cursive;
-  font-size: 16px;
-  color: #6A67CE;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  color: #F9F9F9;
   text-decoration: none;
 }
 
@@ -119,14 +174,14 @@ footer ul li a {
   display: grid;
   grid-template-columns: 430px 430px 430px;
   grid-template-rows: 300px 300px 300px;
-  padding: 40px;
+  padding: 30px;
 }
 .Noticias .imagesNoticias {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 5px;
-  margin: 40px;
+  margin: 5px;
   transition: all 2s;
 }
 .Noticias .imagesNoticias:hover {
@@ -144,10 +199,24 @@ footer ul li a {
 }
 .Noticias .imagesNoticias ul li a {
   padding: 5px;
-  font-family: "Bebas Neue", cursive;
-  font-size: 20px;
-  color: blueviolet;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #0096FF;
   text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .Noticias {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+@media (max-width: 476px) {
+  .Noticias img {
+    display: none;
+  }
+  .Noticias a {
+    font-size: 10px;
+  }
 }
 
 .imagesParks {
@@ -157,56 +226,70 @@ footer ul li a {
   align-items: center;
   padding: 10 px 10 px 10 px 15px;
   margin: 20px;
+  background-color: #EEF1FF;
+  transition: all 2s;
+}
+.imagesParks:hover {
+  transform: scale(1.03);
+}
+.imagesParks img {
+  border-radius: 20px;
 }
 .imagesParks p {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   font-weight: 600;
   line-height: 45px;
   text-align: left;
-  color: #6e6288;
+  color: black;
 }
 .imagesParks p span {
-  font-style: italic;
-  color: #6A67CE;
+  color: #0096FF;
+  font-size: 20px;
+}
+@media (max-width: 900px) {
+  .imagesParks img {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .imagesParks p {
+    font-size: 10px;
+  }
+  .imagesParks span {
+    font-size: 12px;
+  }
 }
 
 h1 {
-  padding: 30px;
-  font-family: "Bebas Neue", cursive;
-  font-size: 40px;
+  padding: 20px 10px 20px 10px;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0096FF;
   text-align: center;
-  color: #6A67CE;
 }
 
-.carousel-item {
-  padding: 50px;
-  margin: 0px 10px 100px 10px;
+@media (max-width: 576px) {
+  h1 {
+    font-size: 15px;
+  }
 }
-.carousel-item img {
+.carousel {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  width: 600px;
-  height: 500px;
+  padding: 10px 50px 50px 50px;
+  margin: 30px;
 }
-.carousel-item h5 {
-  font-family: "Bebas Neue", cursive;
-  font-size: 20px;
-  font-weight: 200;
-  text-align: center;
-  color: #F1F0C0;
-}
-
-.activities {
-  font-family: "Bebas Neue", cursive;
-  font-size: 20px;
-  text-align: center;
-  color: #c0c5f1;
+.carousel img {
+  border: solid 20px #EEF1FF;
+  background-color: #EEF1FF;
 }
 
 .contact {
@@ -215,19 +298,35 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 20px 50px 50px 50px;
-  border: inset 3px #C689C6;
+  border: inset 5px #0096FF;
   margin: 100px 300px 100px 300px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   text-align: center;
   font-weight: 600;
-  color: #937DC2;
-  background-color: #FCC5C0;
+  color: black;
 }
 .contact .contactTwo {
   padding: 30px;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   text-align: center;
-  color: #937DC2;
+  color: #0096FF;
+}
+@media (max-width: 910px) {
+  .contact {
+    background-color: none;
+    border: none;
+  }
+}
+@media (max-width: 576px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=estilos.css.map */

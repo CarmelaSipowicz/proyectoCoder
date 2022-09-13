@@ -16,16 +16,17 @@
         @include flex-column-center;
         align-items: center;
         padding: 50px;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         font-weight: 600;
         line-height: 45px;
         text-align: left;
-        color: #6e6288;
+        color: black;
     
         span{
-            font-style: italic;
-            color: $color-azul;
+            font-size: 30px;
+            font-weight: 700;
+            color: $color-celeste
         
         
         }
@@ -35,13 +36,33 @@
         display: flex;
         justify-content: center;
         padding: 30px;
-        border: 3px solid $color-viol;
+        border: 5px solid $color-celeste;
         margin: 180px 20px 20px 50px;
-        background-color: $color-lightviol;
+        background-color: $color-fondo;
     }
-
-
+    
+    @media (max-width: 900px){
+        display:grid;
+        grid-template-columns:min-content;
+    }
+    @media (max-width: 576px){
+        display:grid;
+        grid-template-columns:min-content;
+        iframe {
+            display: none !important;
+        }
+        p{
+            display: inline;
+            font-size:14px;
+            span{
+                font-size: 20px;
+            }
+        }
+    }
+    
 }
+
+
 
 .parks{
     display: grid;
@@ -66,19 +87,27 @@
         }
 
         h2{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: $color-azul;
+            font-family: 'Montserrat', sans-serif;;
+            color: $color-celeste;
             font-weight: 600;
             text-align: center;
             font-size: 16px;
         }
         
         h3{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: $color-azul;
+            font-family: 'Montserrat', sans-serif;;
+            color: black;
             font-weight: 600;
             text-align: center;
             font-size: 13px;
         }
+    }
+
+    @media (max-width: 900px){
+        display:grid;
+        grid-template-columns:min-content;
+        }
+    @media (max-width: 576px) {
+        display: none !important;
     }
 }

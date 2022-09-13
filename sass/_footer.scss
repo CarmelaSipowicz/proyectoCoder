@@ -3,16 +3,24 @@ footer{
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
+    background-color: $color-celeste;
+    text-align: right;
+    line-height: normal;
+
+    h4{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 10px;
+        color: $color-fondo;
+    }
 
     ul li{
         list-style-type: none;
 
         a{
-            font-family: 'Bebas Neue', cursive;;
-            font-size: 16px;
-            color: $color-azul;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            color: $color-fondo;
             text-decoration: none;
-    
         }
 
 

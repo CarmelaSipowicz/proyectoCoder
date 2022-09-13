@@ -4,21 +4,35 @@
     justify-content: center;
     align-items: center;
     padding: 20px 50px 50px 50px ;
-    border: inset 3px #C689C6;
+    border: inset 5px $color-celeste;
     margin: 100px 300px 100px 300px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     text-align: center;
     font-weight: 600;
-    color: #937DC2;
-    background-color: #FCC5C0;
+    color: black;
 
     .contactTwo{
         padding: 30px;
-        font-family: 'Bebas Neue', cursive;
+        font-family: 'Montserrat', sans-serif;
         font-size: 30px;
         text-align: center;
-        color: #937DC2;
+        color: $color-celeste;
+    }
+
+    @media (max-width:910px) {
+        background-color: none;
+        border:none;
+        }
+    
+    @media (max-width:576px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        padding: 20px;
+        margin:20px;
+        text-align: left;
+        font-size: 12px;
     }
 }
 
